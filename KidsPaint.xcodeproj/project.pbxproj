@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7A8899614AF2894005FEC9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A8899514AF2894005FEC9F /* UIKit.framework */; };
+		F7A8899814AF2894005FEC9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A8899714AF2894005FEC9F /* Foundation.framework */; };
+		F7A8899A14AF2894005FEC9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A8899914AF2894005FEC9F /* CoreGraphics.framework */; };
+		F7A889A014AF2894005FEC9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7A8899E14AF2894005FEC9F /* InfoPlist.strings */; };
+		F7A889A214AF2894005FEC9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A889A114AF2894005FEC9F /* main.m */; };
+		F7A889A614AF2894005FEC9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A889A514AF2894005FEC9F /* AppDelegate.m */; };
+		F7A889A914AF2894005FEC9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A889A814AF2894005FEC9F /* ViewController.m */; };
+		F7A889AC14AF2894005FEC9F /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7A889AA14AF2894005FEC9F /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F7A8899114AF2894005FEC9F /* KidsPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7A8899514AF2894005FEC9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F7A8899714AF2894005FEC9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F7A8899914AF2894005FEC9F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F7A8899D14AF2894005FEC9F /* KidsPaint-Info.plist */ = {isa = PBXFileReference; path = "KidsPaint-Info.plist"; sourceTree = "<group>"; };
+		F7A8899F14AF2894005FEC9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7A889A114AF2894005FEC9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7A889A314AF2894005FEC9F /* KidsPaint-Prefix.pch */ = {isa = PBXFileReference; path = "KidsPaint-Prefix.pch"; sourceTree = "<group>"; };
+		F7A889A414AF2894005FEC9F /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		F7A889A514AF2894005FEC9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F7A889A714AF2894005FEC9F /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		F7A889A814AF2894005FEC9F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F7A889AB14AF2894005FEC9F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7A8898E14AF2894005FEC9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A8899614AF2894005FEC9F /* UIKit.framework in Frameworks */,
+				F7A8899814AF2894005FEC9F /* Foundation.framework in Frameworks */,
+				F7A8899A14AF2894005FEC9F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7A8898614AF2894005FEC9F = {
+			isa = PBXGroup;
+			children = (
+				F7A8899B14AF2894005FEC9F /* KidsPaint */,
+				F7A8899414AF2894005FEC9F /* Frameworks */,
+				F7A8899214AF2894005FEC9F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7A8899214AF2894005FEC9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7A8899114AF2894005FEC9F /* KidsPaint.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7A8899414AF2894005FEC9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7A8899514AF2894005FEC9F /* UIKit.framework */,
+				F7A8899714AF2894005FEC9F /* Foundation.framework */,
+				F7A8899914AF2894005FEC9F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7A8899B14AF2894005FEC9F /* KidsPaint */ = {
+			isa = PBXGroup;
+			children = (
+				F7A889A414AF2894005FEC9F /* AppDelegate.h */,
+				F7A889A514AF2894005FEC9F /* AppDelegate.m */,
+				F7A889A714AF2894005FEC9F /* ViewController.h */,
+				F7A889A814AF2894005FEC9F /* ViewController.m */,
+				F7A889AA14AF2894005FEC9F /* ViewController.xib */,
+				F7A8899C14AF2894005FEC9F /* Supporting Files */,
+			);
+			path = KidsPaint;
+			sourceTree = "<group>";
+		};
+		F7A8899C14AF2894005FEC9F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7A8899D14AF2894005FEC9F /* KidsPaint-Info.plist */,
+				F7A8899E14AF2894005FEC9F /* InfoPlist.strings */,
+				F7A889A114AF2894005FEC9F /* main.m */,
+				F7A889A314AF2894005FEC9F /* KidsPaint-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7A8899014AF2894005FEC9F /* KidsPaint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7A889AF14AF2894005FEC9F /* Build configuration list for PBXNativeTarget "KidsPaint" */;
+			buildPhases = (
+				F7A8898D14AF2894005FEC9F /* Sources */,
+				F7A8898E14AF2894005FEC9F /* Frameworks */,
+				F7A8898F14AF2894005FEC9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KidsPaint;
+			productName = KidsPaint;
+			productReference = F7A8899114AF2894005FEC9F /* KidsPaint.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7A8898814AF2894005FEC9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = F7A8898B14AF2894005FEC9F /* Build configuration list for PBXProject "KidsPaint" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F7A8898614AF2894005FEC9F;
+			productRefGroup = F7A8899214AF2894005FEC9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7A8899014AF2894005FEC9F /* KidsPaint */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7A8898F14AF2894005FEC9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A889A014AF2894005FEC9F /* InfoPlist.strings in Resources */,
+				F7A889AC14AF2894005FEC9F /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7A8898D14AF2894005FEC9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A889A214AF2894005FEC9F /* main.m in Sources */,
+				F7A889A614AF2894005FEC9F /* AppDelegate.m in Sources */,
+				F7A889A914AF2894005FEC9F /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F7A8899E14AF2894005FEC9F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7A8899F14AF2894005FEC9F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F7A889AA14AF2894005FEC9F /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7A889AB14AF2894005FEC9F /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7A889AD14AF2894005FEC9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		F7A889AE14AF2894005FEC9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7A889B014AF2894005FEC9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KidsPaint/KidsPaint-Prefix.pch";
+				INFOPLIST_FILE = "KidsPaint/KidsPaint-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F7A889B114AF2894005FEC9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KidsPaint/KidsPaint-Prefix.pch";
+				INFOPLIST_FILE = "KidsPaint/KidsPaint-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7A8898B14AF2894005FEC9F /* Build configuration list for PBXProject "KidsPaint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7A889AD14AF2894005FEC9F /* Debug */,
+				F7A889AE14AF2894005FEC9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7A889AF14AF2894005FEC9F /* Build configuration list for PBXNativeTarget "KidsPaint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7A889B014AF2894005FEC9F /* Debug */,
+				F7A889B114AF2894005FEC9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7A8898814AF2894005FEC9F /* Project object */;
+}
