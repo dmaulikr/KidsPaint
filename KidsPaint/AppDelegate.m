@@ -3,12 +3,11 @@
 //  KidsPaint
 //
 //  Created by Frid, Jonas on 2011-12-31.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011-2013 iDoApps. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
-#import "ViewController.h"
+#import "Flurry.h"
 
 @implementation AppDelegate
 
@@ -17,11 +16,40 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
+    // Check the settings
+    NSUserDefaults * standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *enableShareMessagePreference = [standardUserDefaults objectForKey:@"enableShareMessage"];
+    NSString *enableShareMailPreference = [standardUserDefaults objectForKey:@"enableShareMail"];
+    NSString *enableShareFacebookPreference = [standardUserDefaults objectForKey:@"enableShareFacebook"];
+    NSString *enableSharePhotosPreference = [standardUserDefaults objectForKey:@"enableSharePhotos"];
+    NSString *enableShareCopyPreference = [standardUserDefaults objectForKey:@"enableShareCopy"];
+    NSString *enableSharePrintPreference = [standardUserDefaults objectForKey:@"enableSharePrint"];
+    
+    if (!enableShareMessagePreference ||
+        !enableShareMailPreference ||
+        !enableShareFacebookPreference ||
+        !enableSharePhotosPreference ||
+        !enableShareCopyPreference ||
+        !enableSharePrintPreference)
+    {
+        [self registerDefaultsFromSettingsBundle];
+    }
+    
+    // Start Flurry
+    [Flurry startSession:@"GSCSMNCXN2W88X663XSQ"];
+    [Flurry setCrashReportingEnabled:YES];
+    
+    // Init Parental Gate
+    [PGView initWithParentalGateAppKey:@"FE74ED5EC0AFE5A6C096F1D1C8"];
+    
+    // Check for older versions og iOS
+    if ([UIDevice currentDevice].systemVersion.floatValue < 7.0f)
+    {
+        [self setApperanceForOlderiOS];
+    }
+
+    // Return...
     return YES;
 }
 
@@ -62,6 +90,41 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+}
+
+- (void)setApperanceForOlderiOS
+{
+    [UIBarButtonItem appearance].tintColor = nil;
+    [UIToolbar appearance].barStyle = UIBarStyleBlackOpaque;
+}
+
+- (void)registerDefaultsFromSettingsBundle
+{
+    // this function writes default settings as settings
+    NSString *settingsBundle = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
+    
+    if(!settingsBundle)
+    {
+        NSLog(@"Could not find Settings.bundle");
+        return;
+    }
+    
+    NSDictionary *settings = [NSDictionary dictionaryWithContentsOfFile:[settingsBundle stringByAppendingPathComponent:@"Root.plist"]];
+    NSArray *preferences = [settings objectForKey:@"PreferenceSpecifiers"];
+    
+    NSMutableDictionary *defaultsToRegister = [[NSMutableDictionary alloc] initWithCapacity:[preferences count]];
+    
+    for(NSDictionary *prefSpecification in preferences)
+    {
+        NSString *key = [prefSpecification objectForKey:@"Key"];
+        
+        if(key)
+        {
+            [defaultsToRegister setObject:[prefSpecification objectForKey:@"DefaultValue"] forKey:key];
+        }
+    }
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];
 }
 
 @end

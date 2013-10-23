@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="muw-Az-Ifd">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="fxD-X5-9Ig">
+            <objects>
+                <viewController id="muw-Az-Ifd" customClass="MainViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rJJ-i4-Vkl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" id="Giq-8r-0c3" customClass="PaintPadImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="435"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="gwG-qt-9EB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="435"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="bkJ-H2-N6Z">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="Palette.png" id="QVR-J9-jjO">
+                                        <color key="tintColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="wje-C0-Oi2" kind="modal" id="Lh1-p0-2Db"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="Pencil.png" width="42" id="IXh-MO-dBl">
+                                        <color key="tintColor" red="0.59999999999999998" green="0.30196078431372547" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="4M8-qF-Yfz" kind="modal" id="Q0T-ar-bCt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="Landscape.png" width="35" id="9cE-nn-2KT">
+                                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="5Qn-pZ-lM7" kind="modal" id="DfY-Oz-x2x"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4ag-y6-pbA"/>
+                                    <barButtonItem systemItem="action" id="n1e-xn-e5A">
+                                        <inset key="imageInsets" minX="0.0" minY="-3" maxX="0.0" maxY="0.0"/>
+                                        <color key="tintColor" red="0.93333333330000001" green="0.4823529412" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="share:" destination="muw-Az-Ifd" id="Phs-hR-ymb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="14" style="plain" systemItem="fixedSpace" id="Reg-BL-L7b"/>
+                                    <barButtonItem systemItem="trash" id="7qJ-mD-EJ1">
+                                        <inset key="imageInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
+                                        <color key="tintColor" red="0.50196081399917603" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="clear:" destination="muw-Az-Ifd" id="tqQ-7R-eG9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="Giq-8r-0c3" id="XI9-F7-DFl"/>
+                        <outlet property="shareButton" destination="n1e-xn-e5A" id="qyL-zm-uLx"/>
+                        <outlet property="sheetView" destination="gwG-qt-9EB" id="FvI-In-UkK"/>
+                        <outlet property="toolbar" destination="bkJ-H2-N6Z" id="nra-gY-Ai5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NP6-TY-KlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="67"/>
+        </scene>
+        <!--Color View Controller-->
+        <scene sceneID="Sim-0i-DR4">
+            <objects>
+                <viewController id="wje-C0-Oi2" customClass="ColorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ztU-YR-ah8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="n2W-cK-roH">
+                                <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="4CR-LD-pak">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="stop" id="0yz-Ro-awt">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="wje-C0-Oi2" id="toH-1w-udY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imagesScrollView" destination="n2W-cK-roH" id="NOB-ua-SFS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FRf-dz-GE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-270" y="694"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pmV-o7-b92">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="5SW-Yc-2Sq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="23-bird.png" id="EjZ-2p-nso"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="eoa-wh-R9h">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.66666666666666663" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fbA-BF-Xvx" kind="relationship" relationship="rootViewController" id="0ph-64-mYU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3mF-zT-jS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186" y="-1071"/>
+        </scene>
+        <!--Sheet View Controller-->
+        <scene sceneID="Ew1-hf-ZOu">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="fbA-BF-Xvx" customClass="SheetViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="gsK-hd-BpC">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SIJ-NQ-1nw">
+                            <size key="itemSize" width="155" height="185"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SheetCell" id="af8-1M-jc6" customClass="SheetCell">
+                                <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="fbA-BF-Xvx" id="clS-UH-Tdm"/>
+                            <outlet property="delegate" destination="fbA-BF-Xvx" id="moJ-9f-Ygo"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="XIO-Z4-YQY">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="mmY-As-t4J">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancel:" destination="fbA-BF-Xvx" id="ONo-MK-xE9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="No Sheet" id="zMb-9n-73y">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="removeSheet:" destination="fbA-BF-Xvx" id="1Ix-rG-qRC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTp-Wa-0Zd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1659" y="-1071"/>
+        </scene>
+        <!--Sheet Tab Bar View Controller-->
+        <scene sceneID="ZGc-p5-qJC">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="5Qn-pZ-lM7" customClass="SheetTabBarViewController" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="4EA-rs-jYn">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5SW-Yc-2Sq" kind="relationship" relationship="viewControllers" id="zax-IR-po0"/>
+                        <segue destination="DcY-kn-P0I" kind="relationship" relationship="viewControllers" id="Un9-Ln-Yt4"/>
+                        <segue destination="OJU-JE-O6y" kind="relationship" relationship="viewControllers" id="Oye-lh-I9d"/>
+                        <segue destination="YBf-Nr-Fdm" kind="relationship" relationship="viewControllers" id="xMy-tG-wGi"/>
+                        <segue destination="cqw-qs-udA" kind="relationship" relationship="viewControllers" id="goh-CE-vHo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aq7-j1-Hf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="67"/>
+        </scene>
+        <!--Sheet View Controller-->
+        <scene sceneID="QMw-ng-Dbi">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="97T-v7-DKo" customClass="SheetViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="ajt-TD-Hkf">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N1D-Gt-9ro">
+                            <size key="itemSize" width="155" height="185"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SheetCell" id="55y-pv-rV5" customClass="SheetCell">
+                                <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="97T-v7-DKo" id="IIN-bq-syo"/>
+                            <outlet property="delegate" destination="97T-v7-DKo" id="sHQ-O1-6AP"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="nR2-Y8-waD">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="gKJ-QI-eoS">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancel:" destination="97T-v7-DKo" id="w5A-NA-gBD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="No Sheet" id="NK1-aE-cHu">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="removeSheet:" destination="97T-v7-DKo" id="M33-l0-gDN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7D-UU-DdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1659" y="91"/>
+        </scene>
+        <!--Sheet View Controller-->
+        <scene sceneID="Cil-nQ-3tA">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="iHz-yU-gcP" customClass="SheetViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="mTq-tK-o7c">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oP2-UP-JAz">
+                            <size key="itemSize" width="155" height="185"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SheetCell" id="eHZ-Er-7eC" customClass="SheetCell">
+                                <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="iHz-yU-gcP" id="wCb-ki-wnE"/>
+                            <outlet property="delegate" destination="iHz-yU-gcP" id="GIe-2g-K5y"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="HNv-D6-sIr">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="9Qr-gH-Cuc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancel:" destination="iHz-yU-gcP" id="bsk-U1-5sR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="No Sheet" id="NeR-E2-tUh">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="removeSheet:" destination="iHz-yU-gcP" id="lyZ-fZ-hDt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ynj-MZ-8y8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1659" y="-485"/>
+        </scene>
+        <!--Sheet View Controller-->
+        <scene sceneID="RHA-E8-3cp">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="T80-Wa-K3p" customClass="SheetViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="mGh-0A-TYF">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kjH-QJ-zd1">
+                            <size key="itemSize" width="155" height="185"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SheetCell" id="gaM-qn-WaC" customClass="SheetCell">
+                                <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="T80-Wa-K3p" id="AId-hi-CKk"/>
+                            <outlet property="delegate" destination="T80-Wa-K3p" id="mZK-P5-lrb"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="NGX-qc-Rka">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="2Ud-yY-bCz">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancel:" destination="T80-Wa-K3p" id="xnW-tp-7DR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="No Sheet" id="SPC-Hl-787">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="removeSheet:" destination="T80-Wa-K3p" id="yfL-md-0CA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="spO-gd-sLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1659" y="1309"/>
+        </scene>
+        <!--Sheet View Controller-->
+        <scene sceneID="2II-nv-qqa">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="aBH-Xb-lQ7" customClass="SheetViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="ao4-yI-017">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fo2-Pm-YUV">
+                            <size key="itemSize" width="155" height="185"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SheetCell" id="ztE-F3-tgO" customClass="SheetCell">
+                                <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="aBH-Xb-lQ7" id="O1f-MJ-uZO"/>
+                            <outlet property="delegate" destination="aBH-Xb-lQ7" id="WPx-oZ-pgE"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="9eH-g9-rgQ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="hfx-Bx-YTa">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancel:" destination="aBH-Xb-lQ7" id="HdH-SF-jQS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="No Sheet" id="PDa-UV-X5h">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="removeSheet:" destination="aBH-Xb-lQ7" id="QNC-ON-EUN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6w4-vs-kUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1659" y="694"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aB0-2g-n2M">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="DcY-kn-P0I" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="house.png" id="jb3-jq-Bcq"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="GzC-Rx-ySh">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iHz-yU-gcP" kind="relationship" relationship="rootViewController" id="DN6-iL-hKY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujs-Pl-0uT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186" y="-485"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4YB-cm-UZM">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="OJU-JE-O6y" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="32-iphone.png" id="V0R-iA-Khk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="pUs-5X-lNv">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="97T-v7-DKo" kind="relationship" relationship="rootViewController" id="HE5-wu-zuA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ztS-ww-gYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186" y="91"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4sM-PZ-4Hy">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="YBf-Nr-Fdm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="people_family.png" id="qLN-v6-IoM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="CAy-1e-R1e">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aBH-Xb-lQ7" kind="relationship" relationship="rootViewController" id="7xt-Yg-h4b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6D-da-9of" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186" y="694"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rj5-4H-tp5">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="cqw-qs-udA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="truck.png" id="AYt-Rs-l0g"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="l4s-zX-zPT">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="T80-Wa-K3p" kind="relationship" relationship="rootViewController" id="RJU-N5-Z5J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2jA-jj-bWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1191" y="1309"/>
+        </scene>
+        <!--Tools View Controller-->
+        <scene sceneID="8Gu-H8-aEZ">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="fRh-5M-rpY" customClass="ToolsViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="s1H-3d-fHq">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J7b-Mr-NHb">
+                            <size key="itemSize" width="155" height="185"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ToolCell" id="C5d-vE-sKy" customClass="ToolCell">
+                                <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="fRh-5M-rpY" id="V4X-Xl-QTr"/>
+                            <outlet property="delegate" destination="fRh-5M-rpY" id="NCt-n3-uz6"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="NCh-cj-HCt">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="Z3M-i9-f7m">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancel:" destination="fRh-5M-rpY" id="noP-xR-1IZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZO8-ji-e9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="1272"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="8tg-69-oNG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4M8-qF-Yfz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="XQs-km-kp8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fhI-yX-0BG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.30196078430000001" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.59999999999999998" green="0.30196078430000001" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.59999999999999998" green="0.30196078430000001" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fRh-5M-rpY" kind="relationship" relationship="rootViewController" id="i7G-aw-CRD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eCE-cX-nFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="694"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="23-bird.png" width="25" height="24"/>
+        <image name="32-iphone.png" width="16" height="28"/>
+        <image name="Landscape.png" width="24" height="18"/>
+        <image name="Palette.png" width="24" height="20"/>
+        <image name="Pencil.png" width="23" height="23"/>
+        <image name="house.png" width="26" height="26"/>
+        <image name="people_family.png" width="26" height="26"/>
+        <image name="truck.png" width="26" height="26"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
