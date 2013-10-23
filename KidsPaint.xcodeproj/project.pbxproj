@@ -1168,6 +1168,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					F7A8899014AF2894005FEC9F = {
+						DevelopmentTeam = VTHEP2B7UP;
+					};
+				};
 			};
 			buildConfigurationList = F7A8898B14AF2894005FEC9F /* Build configuration list for PBXProject "KidsPaint" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1608,12 +1613,11 @@
 		F7A889B014AF2894005FEC9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jonas Frid (K43Y8VHNFY)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jonas Frid (K43Y8VHNFY)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
-					/Users/Manne990/Documents/Xcode/iDoApps/KidsPaint/KidsPaint,
 					/Users/Jonas/Documents/Projects/iDoApps/KidsPaint/KidsPaint,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1625,7 +1629,7 @@
 					"\"$(SRCROOT)/KidsPaint/Flurry\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1CAA596D-70B4-4150-917F-3AC2628B96DB";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1CAA596D-70B4-4150-917F-3AC2628B96DB";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -1635,12 +1639,11 @@
 		F7A889B114AF2894005FEC9F /* Ad Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jonas Frid";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jonas Frid";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
-					/Users/Manne990/Documents/Xcode/iDoApps/KidsPaint/KidsPaint,
 					/Users/Jonas/Documents/Projects/iDoApps/KidsPaint/KidsPaint,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1652,7 +1655,7 @@
 					"\"$(SRCROOT)/KidsPaint/Flurry\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ED44C4B1-39C0-4BBA-ABAC-CD3E7B5652C3";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ED44C4B1-39C0-4BBA-ABAC-CD3E7B5652C3";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = NO;
@@ -1696,12 +1699,11 @@
 		F7F51B4914B3992300284702 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jonas Frid";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jonas Frid";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
-					/Users/Manne990/Documents/Xcode/iDoApps/KidsPaint/KidsPaint,
 					/Users/Jonas/Documents/Projects/iDoApps/KidsPaint/KidsPaint,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1713,7 +1715,7 @@
 					"\"$(SRCROOT)/KidsPaint/Flurry\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2BFCF514-5B67-4F77-87D8-2FBE89CD5E67";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2BFCF514-5B67-4F77-87D8-2FBE89CD5E67";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
