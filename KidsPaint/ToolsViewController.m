@@ -13,7 +13,7 @@
 {
     NSArray *tools;
     int numberOfColumns;
-    int numberOfRows;
+    long numberOfRows;
 }
 
 @end

@@ -161,12 +161,15 @@
     [self closeAllPopovers];
     
     // Fire up the parental gate!
-    CGSize gateSize = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? CGSizeMake(680, 850) : CGSizeMake(285, 380);
+    //CGSize gateSize = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? CGSizeMake(680, 850) : CGSizeMake(285, 380);
     
+    //TODO: Create new parental gate solution
+    /*
     PGView *pgView = [[PGView alloc]initWithSize:gateSize andParentalGate:ParentalGateType3FingerTap];
     pgView.delegate = self;
     [self.view addSubview:pgView];
     [pgView show];
+    */
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -309,6 +312,9 @@
     [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
+//TODO: Create new parental gate solution
+
+/*
 - (void)ParentalLockSucceeded:(PGView *)sender
 {
     // Enable drawing
@@ -400,6 +406,7 @@
     // Enable drawing
     [self enableDrawing];
 }
+*/
 
 // -----------------------------------------------------------------
 

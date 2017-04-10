@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ParentalGate/PGView.h>
+//#import <ParentalGate/PGView.h>
 
 @class ViewController;
 

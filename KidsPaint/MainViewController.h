@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
-#import <ParentalGate/PGView.h>
+//#import <ParentalGate/PGView.h>
 #import "CustomColor.h"
 #import "PaintPadImageView.h"
 #import "ToolsViewController.h"
@@ -19,8 +19,9 @@
 @interface MainViewController : UIViewController<UIActionSheetDelegate,
                                                  ToolsDelegate,
                                                  ColorDelegate,
-                                                 SheetDelegate,
-                                                 ParentalLockSuccessDelegate>
+                                                 SheetDelegate> //ParentalLockSuccessDelegate
+
+//TODO: Create new parental gate solution!
 
 @property (weak, nonatomic) IBOutlet UIImageView *sheetView;
 @property (weak, nonatomic) IBOutlet PaintPadImageView *imageView;

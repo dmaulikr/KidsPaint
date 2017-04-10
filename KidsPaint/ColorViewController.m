@@ -374,7 +374,7 @@
               [CustomColor colorWithRGB:[RGB rgbWithRed:0.6 andGreen:0.3 andBlue:0.1]], // Brown
               nil];
     
-    int numberOfSystemColors = colors.count;
+    long numberOfSystemColors = colors.count;
     
     // Load user colors
     NSMutableArray *userColors = [self loadUserColors];
@@ -386,7 +386,7 @@
     numberOfColorsPerRow = 6;
     
     // Calculate the number of rows
-    int numberOfRows = colors.count / numberOfColorsPerRow;
+    long numberOfRows = colors.count / numberOfColorsPerRow;
     
     if (colors.count % numberOfColorsPerRow > 0)
     {
@@ -492,7 +492,7 @@
     int lastCol = 0;
     
     // Calculate the number of rows
-    int numberOfRows = colors.count / numberOfColorsPerRow;
+    long numberOfRows = colors.count / numberOfColorsPerRow;
     
     if (colors.count % numberOfColorsPerRow > 0)
     {
@@ -534,7 +534,7 @@
 - (void)deleteColorAndButton:(SelectColorButton*)button
 {
     // Store the index of the button to be removed
-    int buttonIndex = button.tag;
+    long buttonIndex = button.tag;
     
     // Delete all subviews in the scroll view
     [[_imagesScrollView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];

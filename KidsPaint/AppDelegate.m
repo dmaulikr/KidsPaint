@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "Flurry.h"
 
 @implementation AppDelegate
 
@@ -35,19 +34,18 @@
     {
         [self registerDefaultsFromSettingsBundle];
     }
-    
-    // Start Flurry
-    [Flurry startSession:@"GSCSMNCXN2W88X663XSQ"];
-    [Flurry setCrashReportingEnabled:YES];
-    
+        
     // Init Parental Gate
-    [PGView initWithParentalGateAppKey:@"FE74ED5EC0AFE5A6C096F1D1C8"];
+    //TODO: Create new parental gate solution!
+    //[PGView initWithParentalGateAppKey:@"FE74ED5EC0AFE5A6C096F1D1C8"];
     
     // Check for older versions og iOS
+    /*
     if ([UIDevice currentDevice].systemVersion.floatValue < 7.0f)
     {
         [self setApperanceForOlderiOS];
     }
+    */
 
     // Return...
     return YES;
@@ -92,11 +90,13 @@
      */
 }
 
+/*
 - (void)setApperanceForOlderiOS
 {
     [UIBarButtonItem appearance].tintColor = nil;
     [UIToolbar appearance].barStyle = UIBarStyleBlackOpaque;
 }
+*/
 
 - (void)registerDefaultsFromSettingsBundle
 {
