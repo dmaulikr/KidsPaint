@@ -1457,6 +1457,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1F3CF892-5F6F-4143-8B2A-5BD519973BF5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Debug;
 		};
@@ -1496,6 +1497,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = "Ad Hoc";
 		};
@@ -1520,6 +1522,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1CAA596D-70B4-4150-917F-3AC2628B96DB";
 				PROVISIONING_PROFILE_SPECIFIER = KidsPaintDevProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1546,6 +1549,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = KidsPaintDevProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = NO;
+				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Ad Hoc";
@@ -1586,6 +1590,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = "App Store";
 		};
@@ -1610,6 +1615,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2BFCF514-5B67-4F77-87D8-2FBE89CD5E67";
 				PROVISIONING_PROFILE_SPECIFIER = KidsPaintAppStoreProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "App Store";
