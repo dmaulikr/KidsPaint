@@ -1,46 +1,54 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="muw-Az-Ifd">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="muw-Az-Ifd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="fxD-X5-9Ig">
             <objects>
                 <viewController id="muw-Az-Ifd" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hgv-Lz-kKw"/>
+                        <viewControllerLayoutGuide type="bottom" id="eu0-5T-vTi"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rJJ-i4-Vkl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" id="Giq-8r-0c3" customClass="PaintPadImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="435"/>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Giq-8r-0c3" customClass="PaintPadImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="gwG-qt-9EB">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="435"/>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwG-qt-9EB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="bkJ-H2-N6Z">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkJ-H2-N6Z">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="uy0-wK-c1d"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem image="Palette.png" id="QVR-J9-jjO">
-                                        <color key="tintColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="wje-C0-Oi2" kind="modal" id="Lh1-p0-2Db"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem image="Pencil.png" width="42" id="IXh-MO-dBl">
-                                        <color key="tintColor" red="0.59999999999999998" green="0.30196078431372547" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.59999999999999998" green="0.30196078431372547" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="4M8-qF-Yfz" kind="modal" id="Q0T-ar-bCt"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem image="Landscape.png" width="35" id="9cE-nn-2KT">
-                                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="5Qn-pZ-lM7" kind="modal" id="DfY-Oz-x2x"/>
                                         </connections>
@@ -48,7 +56,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4ag-y6-pbA"/>
                                     <barButtonItem systemItem="action" id="n1e-xn-e5A">
                                         <inset key="imageInsets" minX="0.0" minY="-3" maxX="0.0" maxY="0.0"/>
-                                        <color key="tintColor" red="0.93333333330000001" green="0.4823529412" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.93333333330000001" green="0.4823529412" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="share:" destination="muw-Az-Ifd" id="Phs-hR-ymb"/>
                                         </connections>
@@ -56,7 +64,7 @@
                                     <barButtonItem width="14" style="plain" systemItem="fixedSpace" id="Reg-BL-L7b"/>
                                     <barButtonItem systemItem="trash" id="7qJ-mD-EJ1">
                                         <inset key="imageInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
-                                        <color key="tintColor" red="0.50196081399917603" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.50196081399917603" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="clear:" destination="muw-Az-Ifd" id="tqQ-7R-eG9"/>
                                         </connections>
@@ -64,7 +72,20 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bkJ-H2-N6Z" firstAttribute="top" secondItem="Giq-8r-0c3" secondAttribute="bottom" id="0x7-nA-de5"/>
+                            <constraint firstItem="Giq-8r-0c3" firstAttribute="leading" secondItem="rJJ-i4-Vkl" secondAttribute="leading" id="1Qe-Zg-n0r"/>
+                            <constraint firstItem="bkJ-H2-N6Z" firstAttribute="leading" secondItem="rJJ-i4-Vkl" secondAttribute="leading" id="35x-sB-RSW"/>
+                            <constraint firstAttribute="trailing" secondItem="gwG-qt-9EB" secondAttribute="trailing" id="3MR-Dw-QiF"/>
+                            <constraint firstItem="Giq-8r-0c3" firstAttribute="top" secondItem="Hgv-Lz-kKw" secondAttribute="bottom" id="GWf-Za-G0n"/>
+                            <constraint firstItem="gwG-qt-9EB" firstAttribute="top" secondItem="Hgv-Lz-kKw" secondAttribute="bottom" id="H5f-xk-JyZ"/>
+                            <constraint firstAttribute="trailing" secondItem="bkJ-H2-N6Z" secondAttribute="trailing" id="VQq-DN-wgm"/>
+                            <constraint firstItem="gwG-qt-9EB" firstAttribute="leading" secondItem="rJJ-i4-Vkl" secondAttribute="leading" id="YKT-QO-9Tp"/>
+                            <constraint firstItem="eu0-5T-vTi" firstAttribute="top" secondItem="bkJ-H2-N6Z" secondAttribute="bottom" id="cqT-q9-TZ9"/>
+                            <constraint firstAttribute="trailing" secondItem="Giq-8r-0c3" secondAttribute="trailing" id="fcd-0e-p6K"/>
+                            <constraint firstItem="bkJ-H2-N6Z" firstAttribute="top" secondItem="gwG-qt-9EB" secondAttribute="bottom" id="ij8-WC-CBO"/>
+                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
@@ -76,37 +97,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NP6-TY-KlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="67"/>
+            <point key="canvasLocation" x="140.5" y="66.5"/>
         </scene>
         <!--Color View Controller-->
         <scene sceneID="Sim-0i-DR4">
             <objects>
                 <viewController id="wje-C0-Oi2" customClass="ColorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A6k-Km-ydD"/>
+                        <viewControllerLayoutGuide type="bottom" id="ahB-Qe-TNf"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ztU-YR-ah8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="n2W-cK-roH">
-                                <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n2W-cK-roH">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="4CR-LD-pak">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CR-LD-pak">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="stop" id="0yz-Ro-awt">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="cancel:" destination="wje-C0-Oi2" id="toH-1w-udY"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
-                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="imagesScrollView" destination="n2W-cK-roH" id="NOB-ua-SFS"/>
@@ -122,10 +147,11 @@
                 <navigationController definesPresentationContext="YES" id="5SW-Yc-2Sq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="23-bird.png" id="EjZ-2p-nso"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="eoa-wh-R9h">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.0" green="0.66666666666666663" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.66666666666666663" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="fbA-BF-Xvx" kind="relationship" relationship="rootViewController" id="0ph-64-mYU"/>
@@ -140,9 +166,9 @@
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="fbA-BF-Xvx" customClass="SheetViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="gsK-hd-BpC">
-                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SIJ-NQ-1nw">
                             <size key="itemSize" width="155" height="185"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -156,7 +182,6 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </collectionViewCell>
                         </cells>
@@ -167,13 +192,13 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="XIO-Z4-YQY">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="mmY-As-t4J">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="cancel:" destination="fbA-BF-Xvx" id="ONo-MK-xE9"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="No Sheet" id="zMb-9n-73y">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="removeSheet:" destination="fbA-BF-Xvx" id="1Ix-rG-qRC"/>
                             </connections>
@@ -192,7 +217,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="4EA-rs-jYn">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="5SW-Yc-2Sq" kind="relationship" relationship="viewControllers" id="zax-IR-po0"/>
@@ -211,9 +236,9 @@
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="97T-v7-DKo" customClass="SheetViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="ajt-TD-Hkf">
-                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N1D-Gt-9ro">
                             <size key="itemSize" width="155" height="185"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -227,7 +252,6 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </collectionViewCell>
                         </cells>
@@ -238,13 +262,13 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="nR2-Y8-waD">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="gKJ-QI-eoS">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="cancel:" destination="97T-v7-DKo" id="w5A-NA-gBD"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="No Sheet" id="NK1-aE-cHu">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="removeSheet:" destination="97T-v7-DKo" id="M33-l0-gDN"/>
                             </connections>
@@ -260,9 +284,9 @@
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="iHz-yU-gcP" customClass="SheetViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="mTq-tK-o7c">
-                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oP2-UP-JAz">
                             <size key="itemSize" width="155" height="185"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -276,7 +300,6 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </collectionViewCell>
                         </cells>
@@ -287,13 +310,13 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="HNv-D6-sIr">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="9Qr-gH-Cuc">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="cancel:" destination="iHz-yU-gcP" id="bsk-U1-5sR"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="No Sheet" id="NeR-E2-tUh">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="removeSheet:" destination="iHz-yU-gcP" id="lyZ-fZ-hDt"/>
                             </connections>
@@ -309,9 +332,9 @@
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="T80-Wa-K3p" customClass="SheetViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="mGh-0A-TYF">
-                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kjH-QJ-zd1">
                             <size key="itemSize" width="155" height="185"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -325,7 +348,6 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </collectionViewCell>
                         </cells>
@@ -336,13 +358,13 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="NGX-qc-Rka">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="2Ud-yY-bCz">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="cancel:" destination="T80-Wa-K3p" id="xnW-tp-7DR"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="No Sheet" id="SPC-Hl-787">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="removeSheet:" destination="T80-Wa-K3p" id="yfL-md-0CA"/>
                             </connections>
@@ -358,9 +380,9 @@
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="aBH-Xb-lQ7" customClass="SheetViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="ao4-yI-017">
-                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fo2-Pm-YUV">
                             <size key="itemSize" width="155" height="185"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -374,7 +396,6 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </collectionViewCell>
                         </cells>
@@ -385,13 +406,13 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="9eH-g9-rgQ">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="hfx-Bx-YTa">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="cancel:" destination="aBH-Xb-lQ7" id="HdH-SF-jQS"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="No Sheet" id="PDa-UV-X5h">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="removeSheet:" destination="aBH-Xb-lQ7" id="QNC-ON-EUN"/>
                             </connections>
@@ -408,10 +429,11 @@
                 <navigationController definesPresentationContext="YES" id="DcY-kn-P0I" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="house.png" id="jb3-jq-Bcq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="GzC-Rx-ySh">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="iHz-yU-gcP" kind="relationship" relationship="rootViewController" id="DN6-iL-hKY"/>
@@ -427,10 +449,11 @@
                 <navigationController definesPresentationContext="YES" id="OJU-JE-O6y" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="32-iphone.png" id="V0R-iA-Khk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="pUs-5X-lNv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="97T-v7-DKo" kind="relationship" relationship="rootViewController" id="HE5-wu-zuA"/>
@@ -446,10 +469,11 @@
                 <navigationController definesPresentationContext="YES" id="YBf-Nr-Fdm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="people_family.png" id="qLN-v6-IoM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="CAy-1e-R1e">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="aBH-Xb-lQ7" kind="relationship" relationship="rootViewController" id="7xt-Yg-h4b"/>
@@ -465,10 +489,11 @@
                 <navigationController definesPresentationContext="YES" id="cqw-qs-udA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="truck.png" id="AYt-Rs-l0g"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="l4s-zX-zPT">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.66666666669999997" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="T80-Wa-K3p" kind="relationship" relationship="rootViewController" id="RJU-N5-Z5J"/>
@@ -483,9 +508,9 @@
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="fRh-5M-rpY" customClass="ToolsViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="s1H-3d-fHq">
-                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J7b-Mr-NHb">
                             <size key="itemSize" width="155" height="185"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -499,7 +524,6 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="155" height="185"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </collectionViewCell>
                         </cells>
@@ -510,7 +534,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="NCh-cj-HCt">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="Z3M-i9-f7m">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="cancel:" destination="fRh-5M-rpY" id="noP-xR-1IZ"/>
                             </connections>
@@ -521,7 +545,7 @@
             </objects>
             <point key="canvasLocation" x="141" y="1272"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Item-->
         <scene sceneID="8tg-69-oNG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4M8-qF-Yfz" sceneMemberID="viewController">
@@ -530,9 +554,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fhI-yX-0BG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.59999999999999998" green="0.30196078430000001" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.59999999999999998" green="0.30196078430000001" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.59999999999999998" green="0.30196078430000001" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.30196078430000001" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.59999999999999998" green="0.30196078430000001" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.59999999999999998" green="0.30196078430000001" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -557,6 +581,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
 </document>
