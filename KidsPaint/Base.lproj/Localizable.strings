@@ -15,5 +15,3 @@
 // String for ParentalGate
 "ParentalGateTitle" = "This is for Mom and Dad!";
 "ParentalGateType3FingerTapDesc" = "Tap with three fingers on this blue box to share the picture.";
-"ParentalGateTypeQuestionDescription" = "To continue, please prove that you are not a kid by Answering the following question.";
-"ParentalGateTypeQuestionText" = "Which of these numbers are divisible by 3?";

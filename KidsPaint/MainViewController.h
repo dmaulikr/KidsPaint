@@ -15,11 +15,13 @@
 #import "ToolsViewController.h"
 #import "ColorViewController.h"
 #import "SheetTabBarViewController.h"
+#import "ParentalGate.h"
 
 @interface MainViewController : UIViewController<UIActionSheetDelegate,
                                                  ToolsDelegate,
                                                  ColorDelegate,
-                                                 SheetDelegate> //ParentalLockSuccessDelegate
+                                                 SheetDelegate,
+                                                 ParentalGateDelegate> //ParentalLockSuccessDelegate
 
 //TODO: Create new parental gate solution!
 

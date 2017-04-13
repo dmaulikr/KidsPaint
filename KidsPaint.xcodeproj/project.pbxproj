@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42D5B3C51EA0092600D0619C /* ParentalGate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D5B3C41EA0092600D0619C /* ParentalGate.m */; };
 		951C47B217F036AD00FF6E06 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951C47B417F036AD00FF6E06 /* Storyboard_iPad.storyboard */; };
 		951C47B617F0373100FF6E06 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951C47B817F0373100FF6E06 /* Storyboard_iPhone.storyboard */; };
 		951C481B17F04DBA00FF6E06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 951C481917F04DBA00FF6E06 /* InfoPlist.strings */; };
@@ -273,6 +274,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42D5B3C41EA0092600D0619C /* ParentalGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentalGate.m; sourceTree = "<group>"; };
+		42D5B3C61EA0093100D0619C /* ParentalGate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParentalGate.h; sourceTree = "<group>"; };
 		951C481A17F04DBA00FF6E06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		952C1C9A17F2A84600D5822E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		952F2F3F17F1CA30003AAB50 /* Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
@@ -951,6 +954,8 @@
 				95D0733E173D067E00FA492F /* SheetCell.m */,
 				958D4BD917E98DA20084AA4E /* ToolCell.h */,
 				958D4BDA17E98DA20084AA4E /* ToolCell.m */,
+				42D5B3C61EA0093100D0619C /* ParentalGate.h */,
+				42D5B3C41EA0092600D0619C /* ParentalGate.m */,
 			);
 			name = UIControls;
 			sourceTree = "<group>";
@@ -1352,6 +1357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				952F2F4017F1CA30003AAB50 /* Tool.m in Sources */,
+				42D5B3C51EA0092600D0619C /* ParentalGate.m in Sources */,
 				F7A889A214AF2894005FEC9F /* main.m in Sources */,
 				F7A889A614AF2894005FEC9F /* AppDelegate.m in Sources */,
 				F7F6A38A14B0ED0700D18276 /* CustomColor.m in Sources */,
