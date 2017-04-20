@@ -3,13 +3,12 @@
 //  KidsPaint
 //
 //  Created by Jonas Frid on 2013-05-10.
-//
+//  Copyright (c) 2011-2017 iDoApps. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
-//#import <ParentalGate/PGView.h>
 #import "CustomColor.h"
 #import "PaintPadImageView.h"
 #import "ToolsViewController.h"
@@ -21,9 +20,7 @@
                                                  ToolsDelegate,
                                                  ColorDelegate,
                                                  SheetDelegate,
-                                                 ParentalGateDelegate> //ParentalLockSuccessDelegate
-
-//TODO: Create new parental gate solution!
+                                                 ParentalGateDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *sheetView;
 @property (weak, nonatomic) IBOutlet PaintPadImageView *imageView;

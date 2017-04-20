@@ -3,7 +3,7 @@
 //  KidsPaint
 //
 //  Created by Jonas Frid on 2017-04-13.
-//
+//  Copyright (c) 2011-2017 iDoApps. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -22,7 +22,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.alpha = 0;
         self.backgroundColor = UIColor.blueColor;
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -31,7 +30,8 @@
         
         [self addGestureRecognizer:tap];
     
-        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 100, frame.size.width - 40, 30)];
+        titleLabel = [UILabel new];
+        titleLabel.alpha = 0;
         titleLabel.textColor = UIColor.yellowColor;
         titleLabel.textAlignment = NSTextAlignmentCenter;
         titleLabel.adjustsFontSizeToFitWidth = false;
@@ -39,7 +39,8 @@
         titleLabel.text = NSLocalizedString(@"ParentalGateTitle", nil);
         [self addSubview:titleLabel];
 
-        messageLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        messageLabel = [UILabel new];
+        messageLabel.alpha = 0;
         messageLabel.numberOfLines = 0;
         messageLabel.textColor = UIColor.whiteColor;
         messageLabel.textAlignment = NSTextAlignmentCenter;
@@ -47,21 +48,29 @@
         messageLabel.font = [UIFont systemFontOfSize:18];
         messageLabel.text = NSLocalizedString(@"ParentalGateType3FingerTapDesc", nil);
         [self addSubview:messageLabel];
-        
-        CGRect labelRect = [messageLabel.text
-                            boundingRectWithSize:CGSizeMake(frame.size.width - 40, 0)
-                            options:NSStringDrawingUsesLineFragmentOrigin
-                            attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]}
-                            context:nil];
-        messageLabel.frame = CGRectMake(20, 150, labelRect.size.width, labelRect.size.height);
     }
     return self;
+}
+
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    titleLabel.frame = CGRectMake(20, 100, self.bounds.size.width - 40, 30);
+ 
+    CGRect labelRect = [messageLabel.text
+                        boundingRectWithSize:CGSizeMake(self.bounds.size.width - 40, 0)
+                        options:NSStringDrawingUsesLineFragmentOrigin
+                        attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]}
+                        context:nil];
+    messageLabel.frame = CGRectMake(20, 150, labelRect.size.width, labelRect.size.height);
 }
 
 -(void)show
 {
     [UIView animateWithDuration:0.2f animations:^{
-        self.alpha = 1;
+        titleLabel.alpha = 1;
+        messageLabel.alpha = 1;
     }];
 }
 

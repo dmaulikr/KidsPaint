@@ -3,7 +3,7 @@
 //  KidsPaint
 //
 //  Created by Frid, Jonas on 2012-01-01.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011-2017 iDoApps. All rights reserved.
 //
 
 #import "CustomColor.h"

@@ -3,10 +3,11 @@
 //  KidsPaint
 //
 //  Created by Jonas Frid on 2013-05-10.
-//
+//  Copyright (c) 2011-2017 iDoApps. All rights reserved.
 //
 
 #import "MainViewController.h"
+#import "UIBarButtonItem+ViewExtensions.h"
 
 @interface MainViewController ()
 {
@@ -161,10 +162,18 @@
     [self closeAllPopovers];
 
     // Show Parental Gate
-    ParentalGate *pgGate = [[ParentalGate alloc] initWithFrame:self.view.bounds];
+    UIBarButtonItem *button = (UIBarButtonItem*)sender;
+    CGRect buttonFrame = [button frameInView:self.view];
+    
+    ParentalGate *pgGate = [[ParentalGate alloc] initWithFrame:buttonFrame];
     pgGate.delegate = self;
     [self.view addSubview:pgGate];
-    [pgGate show];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        pgGate.frame = self.view.frame;
+    } completion:^(BOOL finished) {
+        [pgGate show];
+    }];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -306,102 +315,6 @@
 {
     [self dismissViewControllerAnimated:YES completion:^{}];
 }
-
-//TODO: Create new parental gate solution
-
-/*
-- (void)ParentalLockSucceeded:(PGView *)sender
-{
-    // Enable drawing
-    [self enableDrawing];
-    
-    // Go ahead with the sharing features
-    UIImage *combinedImage = [self combineImage:_imageView andImage:_sheetView];
-    NSArray *itemsToShare = @[combinedImage];
-    
-    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
-    
-    [activityViewController setValue:@"Drawing from Kids Paint Book" forKey:@"subject"];
-    
-    // Check for older versions og iOS
-    NSMutableArray *excludedActivityTypes = [NSMutableArray new];
-    
-    [excludedActivityTypes addObject:UIActivityTypeAssignToContact];
-    [excludedActivityTypes addObject:UIActivityTypePostToTwitter];
-    [excludedActivityTypes addObject:UIActivityTypePostToWeibo];
-    
-    if ([UIDevice currentDevice].systemVersion.floatValue >= 7.0f)
-    {
-        [excludedActivityTypes addObject:UIActivityTypeAddToReadingList];
-        [excludedActivityTypes addObject:UIActivityTypeAirDrop];
-        [excludedActivityTypes addObject:UIActivityTypePostToTencentWeibo];
-        [excludedActivityTypes addObject:UIActivityTypePostToVimeo];
-    }
-    
-    // Read user settings
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    if ([defaults boolForKey:@"enableShareMessage"] == NO)
-    {
-        [excludedActivityTypes addObject:UIActivityTypeMessage];
-    }
-    
-    if ([defaults boolForKey:@"enableShareMail"] == NO)
-    {
-        [excludedActivityTypes addObject:UIActivityTypeMail];
-    }
-    
-    if ([defaults boolForKey:@"enableShareFacebook"] == NO)
-    {
-        [excludedActivityTypes addObject:UIActivityTypePostToFacebook];
-    }
-    
-    if ([defaults boolForKey:@"enableSharePhotos"] == NO)
-    {
-        [excludedActivityTypes addObject:UIActivityTypeSaveToCameraRoll];
-    }
-    
-    if ([defaults boolForKey:@"enableShareCopy"] == NO)
-    {
-        [excludedActivityTypes addObject:UIActivityTypeCopyToPasteboard];
-    }
-    
-    if ([defaults boolForKey:@"enableSharePrint"] == NO)
-    {
-        [excludedActivityTypes addObject:UIActivityTypePrint];
-    }
-    
-    activityViewController.excludedActivityTypes = excludedActivityTypes;
-    
-    [activityViewController setCompletionHandler:^(NSString *activityType, BOOL completed)
-    {
-        if (completed)
-        {
-            // Play animation
-            [UIView animateWithDuration:0.5 animations:^{
-                _sheetView.frame = CGRectMake((self.view.frame.size.width - 100) / 2, (self.view.frame.size.height - 100) / 2, 100, 100);
-                _imageView.frame = CGRectMake((self.view.frame.size.width - 100) / 2, (self.view.frame.size.height - 100) / 2, 100, 100);
-            } completion:^(BOOL finished) {
-                [UIView animateWithDuration:0.5 animations:^{
-                    _sheetView.frame = CGRectMake(1000, (self.view.frame.size.height - 100) / 2, 100, 100);
-                    _imageView.frame = CGRectMake(1000, (self.view.frame.size.height - 100) / 2, 100, 100);
-                } completion:^(BOOL finished) {
-                    _imageView.frame = imageViewNormalFrame;
-                    _sheetView.frame = imageViewNormalFrame;
-                }];
-            }];
-        }
-    }];
-    
-    [self presentViewController:activityViewController animated:YES completion:nil];
-}
-
-- (void)ParentalLockCancelled:(PGView *)sender
-{
-    // Enable drawing
-    [self enableDrawing];
-}
-*/
 
 // -----------------------------------------------------------------
 

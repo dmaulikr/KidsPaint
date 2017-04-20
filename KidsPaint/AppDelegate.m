@@ -3,7 +3,7 @@
 //  KidsPaint
 //
 //  Created by Frid, Jonas on 2011-12-31.
-//  Copyright (c) 2011-2013 iDoApps. All rights reserved.
+//  Copyright (c) 2011-2017 iDoApps. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -34,18 +34,6 @@
     {
         [self registerDefaultsFromSettingsBundle];
     }
-        
-    // Init Parental Gate
-    //TODO: Create new parental gate solution!
-    //[PGView initWithParentalGateAppKey:@"FE74ED5EC0AFE5A6C096F1D1C8"];
-    
-    // Check for older versions og iOS
-    /*
-    if ([UIDevice currentDevice].systemVersion.floatValue < 7.0f)
-    {
-        [self setApperanceForOlderiOS];
-    }
-    */
 
     // Return...
     return YES;
@@ -89,14 +77,6 @@
      See also applicationDidEnterBackground:.
      */
 }
-
-/*
-- (void)setApperanceForOlderiOS
-{
-    [UIBarButtonItem appearance].tintColor = nil;
-    [UIToolbar appearance].barStyle = UIBarStyleBlackOpaque;
-}
-*/
 
 - (void)registerDefaultsFromSettingsBundle
 {

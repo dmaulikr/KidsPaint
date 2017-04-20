@@ -3,7 +3,7 @@
 //  KidsPaint
 //
 //  Created by Jonas Frid on 2013-05-10.
-//
+//  Copyright (c) 2011-2017 iDoApps. All rights reserved.
 //
 
 #import "ToolsViewController.h"
@@ -133,7 +133,7 @@
                         
                         Tool *tool = [Tool new];
                         
-                        tool.type = [[toolSpec objectForKey:@"id"] integerValue];
+                        tool.type = [[toolSpec objectForKey:@"id"] intValue];
                         tool.name = [toolSpec objectForKey:@"name"];
                         tool.fill = [[toolSpec objectForKey:@"fill"] boolValue];
                         tool.lineWidth = [[toolSpec objectForKey:@"linewidth"] floatValue];

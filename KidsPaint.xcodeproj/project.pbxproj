@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		422D51FA1EA89B8600FF8BB6 /* UIBarButtonItem+ViewExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 422D51F91EA89B8600FF8BB6 /* UIBarButtonItem+ViewExtensions.m */; };
+		422D51FC1EA8A01600FF8BB6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422D51FB1EA8A01600FF8BB6 /* Launch Screen.storyboard */; };
 		42D5B3C51EA0092600D0619C /* ParentalGate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D5B3C41EA0092600D0619C /* ParentalGate.m */; };
 		951C47B217F036AD00FF6E06 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951C47B417F036AD00FF6E06 /* Storyboard_iPad.storyboard */; };
 		951C47B617F0373100FF6E06 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951C47B817F0373100FF6E06 /* Storyboard_iPhone.storyboard */; };
@@ -274,6 +276,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		422D51F81EA89B8600FF8BB6 /* UIBarButtonItem+ViewExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+ViewExtensions.h"; sourceTree = "<group>"; };
+		422D51F91EA89B8600FF8BB6 /* UIBarButtonItem+ViewExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+ViewExtensions.m"; sourceTree = "<group>"; };
+		422D51FB1EA8A01600FF8BB6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		42D5B3C41EA0092600D0619C /* ParentalGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentalGate.m; sourceTree = "<group>"; };
 		42D5B3C61EA0093100D0619C /* ParentalGate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParentalGate.h; sourceTree = "<group>"; };
 		951C481A17F04DBA00FF6E06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -581,6 +586,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		422D51F71EA89B3700FF8BB6 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				422D51F81EA89B8600FF8BB6 /* UIBarButtonItem+ViewExtensions.h */,
+				422D51F91EA89B8600FF8BB6 /* UIBarButtonItem+ViewExtensions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		954DB5A8173D42F800D88A7E /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -853,6 +867,7 @@
 			children = (
 				951C47B417F036AD00FF6E06 /* Storyboard_iPad.storyboard */,
 				951C47B817F0373100FF6E06 /* Storyboard_iPhone.storyboard */,
+				422D51FB1EA8A01600FF8BB6 /* Launch Screen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -860,6 +875,7 @@
 		95D07326173CD21900FA492F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				422D51F71EA89B3700FF8BB6 /* Categories */,
 				F7ACB62514B363960004D7FD /* ColorHandler */,
 				F7ACB62414B363360004D7FD /* UIControls */,
 				956CCCE617EC6A2A003DD9D7 /* Tool.h */,
@@ -1183,6 +1199,7 @@
 				95D07315173CD10300FA492F /* Boat1.png in Resources */,
 				95B9DB2C17F0667D00F07112 /* Default-568h@2x.png in Resources */,
 				95D07316173CD10300FA492F /* Boat2.png in Resources */,
+				422D51FC1EA8A01600FF8BB6 /* Launch Screen.storyboard in Resources */,
 				95F78EA417F0650F0027F467 /* Default_iOS7_4.png in Resources */,
 				95D07317173CD10300FA492F /* Car1.png in Resources */,
 				95D07318173CD10300FA492F /* Car2.png in Resources */,
@@ -1363,6 +1380,7 @@
 				F7F6A38A14B0ED0700D18276 /* CustomColor.m in Sources */,
 				F7BFFE0E14B341460012B700 /* PaintPadImageView.m in Sources */,
 				F7E660B614E022CF00E8CED4 /* SelectColorButton.m in Sources */,
+				422D51FA1EA89B8600FF8BB6 /* UIBarButtonItem+ViewExtensions.m in Sources */,
 				F7F5689014E11EDA00D486AE /* RGB.m in Sources */,
 				F7F5689414E11EEA00D486AE /* CMYK.m in Sources */,
 				F7F5689714E146E600D486AE /* LAB.m in Sources */,
