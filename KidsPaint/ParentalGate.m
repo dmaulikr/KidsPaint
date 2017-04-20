@@ -63,7 +63,7 @@
                         options:NSStringDrawingUsesLineFragmentOrigin
                         attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]}
                         context:nil];
-    messageLabel.frame = CGRectMake(20, 150, labelRect.size.width, labelRect.size.height);
+    messageLabel.frame = CGRectMake(20, 150, self.bounds.size.width - 40, labelRect.size.height);
 }
 
 -(void)show
