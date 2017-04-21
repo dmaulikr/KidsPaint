@@ -339,14 +339,10 @@
     [excludedActivityTypes addObject:UIActivityTypeAssignToContact];
     [excludedActivityTypes addObject:UIActivityTypePostToTwitter];
     [excludedActivityTypes addObject:UIActivityTypePostToWeibo];
-    
-    if ([UIDevice currentDevice].systemVersion.floatValue >= 7.0f)
-    {
-        [excludedActivityTypes addObject:UIActivityTypeAddToReadingList];
-        [excludedActivityTypes addObject:UIActivityTypeAirDrop];
-        [excludedActivityTypes addObject:UIActivityTypePostToTencentWeibo];
-        [excludedActivityTypes addObject:UIActivityTypePostToVimeo];
-    }
+    [excludedActivityTypes addObject:UIActivityTypeAddToReadingList];
+    [excludedActivityTypes addObject:UIActivityTypeAirDrop];
+    [excludedActivityTypes addObject:UIActivityTypePostToTencentWeibo];
+    [excludedActivityTypes addObject:UIActivityTypePostToVimeo];
     
     // Read user settings
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -482,14 +478,7 @@
     }
     
     // Enable/Disable the sharing button
-    if (oneIsYes)
-    {
-        _shareButton.enabled = YES;
-    }
-    else
-    {
-        _shareButton.enabled = NO;
-    }
+    _shareButton.enabled = oneIsYes;
 }
 
 - (void)closeAllPopovers
@@ -521,9 +510,6 @@
 
 - (UIImage*)combineImage:(UIImageView*)imageView1 andImage:(UIImageView*)imageView2
 {
-    //NSLog(@"%f, %f, %f, %f", imageView1.frame.origin.x, imageView1.frame.origin.y, imageView1.frame.size.width, imageView1.frame.size.height);
-    //NSLog(@"%f, %f, %f, %f", imageView2.frame.origin.x, imageView2.frame.origin.y, imageView2.frame.size.width, imageView2.frame.size.height);
-    
     // Combine the drawing and the coloring sheet
 	UIGraphicsBeginImageContext(imageView1.frame.size);
     
