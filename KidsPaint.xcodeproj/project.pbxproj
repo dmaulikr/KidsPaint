@@ -12,6 +12,7 @@
 		42D4F1CB1EAA37DB009BCE5C /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D4F1C81EAA37DB009BCE5C /* close.png */; };
 		42D4F1CC1EAA37DB009BCE5C /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D4F1C91EAA37DB009BCE5C /* close@2x.png */; };
 		42D4F1CD1EAA37DB009BCE5C /* close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D4F1CA1EAA37DB009BCE5C /* close@3x.png */; };
+		42D4F1CF1EAA3D5F009BCE5C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42D4F1CE1EAA3D5F009BCE5C /* Images.xcassets */; };
 		42D5B3C51EA0092600D0619C /* ParentalGate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D5B3C41EA0092600D0619C /* ParentalGate.m */; };
 		951C47B217F036AD00FF6E06 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951C47B417F036AD00FF6E06 /* Storyboard_iPad.storyboard */; };
 		951C47B617F0373100FF6E06 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951C47B817F0373100FF6E06 /* Storyboard_iPhone.storyboard */; };
@@ -137,19 +138,6 @@
 		95B22716173D468500A336FA /* PolarBear_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B22706173D468500A336FA /* PolarBear_thumb.png */; };
 		95B22717173D468500A336FA /* Rabbit_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B22707173D468500A336FA /* Rabbit_thumb.png */; };
 		95B22718173D468500A336FA /* Whale_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B22708173D468500A336FA /* Whale_thumb.png */; };
-		95B9DB3217F0674500F07112 /* KidsPaint_Icon_76.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B9DB2F17F0674500F07112 /* KidsPaint_Icon_76.png */; };
-		95B9DB3317F0674500F07112 /* KidsPaint_Icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B9DB3017F0674500F07112 /* KidsPaint_Icon_120.png */; };
-		95B9DB3417F0674500F07112 /* KidsPaint_Icon_152.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B9DB3117F0674500F07112 /* KidsPaint_Icon_152.png */; };
-		95B9DB3B17F067FF00F07112 /* KidsPaint_Icon_100.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B9DB3517F067FF00F07112 /* KidsPaint_Icon_100.png */; };
-		95B9DB3C17F067FF00F07112 /* KidsPaint_Icon_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B9DB3617F067FF00F07112 /* KidsPaint_Icon_80.png */; };
-		95B9DB3D17F067FF00F07112 /* KidsPaint_Icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B9DB3717F067FF00F07112 /* KidsPaint_Icon_58.png */; };
-		95B9DB3E17F067FF00F07112 /* KidsPaint_Icon_50.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B9DB3817F067FF00F07112 /* KidsPaint_Icon_50.png */; };
-		95B9DB3F17F067FF00F07112 /* KidsPaint_Icon_40.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B9DB3917F067FF00F07112 /* KidsPaint_Icon_40.png */; };
-		95B9DB4017F067FF00F07112 /* KidsPaint_Icon_29.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B9DB3A17F067FF00F07112 /* KidsPaint_Icon_29.png */; };
-		95C7336017C498200092BCBC /* KidsPaint_Icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7335F17C498200092BCBC /* KidsPaint_Icon_57.png */; };
-		95C7336217C498290092BCBC /* KidsPaint_Icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7336117C498290092BCBC /* KidsPaint_Icon_114.png */; };
-		95C7336417C498310092BCBC /* KidsPaint_Icon_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7336317C498310092BCBC /* KidsPaint_Icon_72.png */; };
-		95C7336617C498350092BCBC /* KidsPaint_Icon_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7336517C498350092BCBC /* KidsPaint_Icon_144.png */; };
 		95D07295173CD0B000FA492F /* Deer.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D07285173CD0B000FA492F /* Deer.png */; };
 		95D07296173CD0B000FA492F /* Dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D07286173CD0B000FA492F /* Dog.png */; };
 		95D07297173CD0B000FA492F /* Dolphin.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D07287173CD0B000FA492F /* Dolphin.png */; };
@@ -274,6 +262,7 @@
 		42D4F1C81EAA37DB009BCE5C /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		42D4F1C91EAA37DB009BCE5C /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
 		42D4F1CA1EAA37DB009BCE5C /* close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@3x.png"; sourceTree = "<group>"; };
+		42D4F1CE1EAA3D5F009BCE5C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		42D5B3C41EA0092600D0619C /* ParentalGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentalGate.m; sourceTree = "<group>"; };
 		42D5B3C61EA0093100D0619C /* ParentalGate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParentalGate.h; sourceTree = "<group>"; };
 		951C481A17F04DBA00FF6E06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -407,19 +396,6 @@
 		95B22706173D468500A336FA /* PolarBear_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PolarBear_thumb.png; sourceTree = "<group>"; };
 		95B22707173D468500A336FA /* Rabbit_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rabbit_thumb.png; sourceTree = "<group>"; };
 		95B22708173D468500A336FA /* Whale_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Whale_thumb.png; sourceTree = "<group>"; };
-		95B9DB2F17F0674500F07112 /* KidsPaint_Icon_76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KidsPaint_Icon_76.png; sourceTree = "<group>"; };
-		95B9DB3017F0674500F07112 /* KidsPaint_Icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KidsPaint_Icon_120.png; sourceTree = "<group>"; };
-		95B9DB3117F0674500F07112 /* KidsPaint_Icon_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KidsPaint_Icon_152.png; sourceTree = "<group>"; };
-		95B9DB3517F067FF00F07112 /* KidsPaint_Icon_100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KidsPaint_Icon_100.png; sourceTree = "<group>"; };
-		95B9DB3617F067FF00F07112 /* KidsPaint_Icon_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KidsPaint_Icon_80.png; sourceTree = "<group>"; };
-		95B9DB3717F067FF00F07112 /* KidsPaint_Icon_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KidsPaint_Icon_58.png; sourceTree = "<group>"; };
-		95B9DB3817F067FF00F07112 /* KidsPaint_Icon_50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KidsPaint_Icon_50.png; sourceTree = "<group>"; };
-		95B9DB3917F067FF00F07112 /* KidsPaint_Icon_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KidsPaint_Icon_40.png; sourceTree = "<group>"; };
-		95B9DB3A17F067FF00F07112 /* KidsPaint_Icon_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KidsPaint_Icon_29.png; sourceTree = "<group>"; };
-		95C7335F17C498200092BCBC /* KidsPaint_Icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KidsPaint_Icon_57.png; sourceTree = SOURCE_ROOT; };
-		95C7336117C498290092BCBC /* KidsPaint_Icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KidsPaint_Icon_114.png; sourceTree = SOURCE_ROOT; };
-		95C7336317C498310092BCBC /* KidsPaint_Icon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KidsPaint_Icon_72.png; sourceTree = SOURCE_ROOT; };
-		95C7336517C498350092BCBC /* KidsPaint_Icon_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KidsPaint_Icon_144.png; sourceTree = SOURCE_ROOT; };
 		95D07285173CD0B000FA492F /* Deer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Deer.png; sourceTree = "<group>"; };
 		95D07286173CD0B000FA492F /* Dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dog.png; sourceTree = "<group>"; };
 		95D07287173CD0B000FA492F /* Dolphin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dolphin.png; sourceTree = "<group>"; };
@@ -926,6 +902,7 @@
 				958D4BB917E9784F0084AA4E /* Tools */,
 				95D07325173CD20A00FA492F /* View */,
 				95D07327173CD23E00FA492F /* ViewController */,
+				42D4F1CE1EAA3D5F009BCE5C /* Images.xcassets */,
 			);
 			path = KidsPaint;
 			sourceTree = "<group>";
@@ -998,19 +975,6 @@
 				42D4F1C81EAA37DB009BCE5C /* close.png */,
 				42D4F1C91EAA37DB009BCE5C /* close@2x.png */,
 				42D4F1CA1EAA37DB009BCE5C /* close@3x.png */,
-				95B9DB3A17F067FF00F07112 /* KidsPaint_Icon_29.png */,
-				95B9DB3917F067FF00F07112 /* KidsPaint_Icon_40.png */,
-				95B9DB3817F067FF00F07112 /* KidsPaint_Icon_50.png */,
-				95C7335F17C498200092BCBC /* KidsPaint_Icon_57.png */,
-				95B9DB3717F067FF00F07112 /* KidsPaint_Icon_58.png */,
-				95C7336317C498310092BCBC /* KidsPaint_Icon_72.png */,
-				95B9DB2F17F0674500F07112 /* KidsPaint_Icon_76.png */,
-				95B9DB3617F067FF00F07112 /* KidsPaint_Icon_80.png */,
-				95B9DB3517F067FF00F07112 /* KidsPaint_Icon_100.png */,
-				95C7336117C498290092BCBC /* KidsPaint_Icon_114.png */,
-				95B9DB3017F0674500F07112 /* KidsPaint_Icon_120.png */,
-				95C7336517C498350092BCBC /* KidsPaint_Icon_144.png */,
-				95B9DB3117F0674500F07112 /* KidsPaint_Icon_152.png */,
 				F75E36F4153709C4005E9D52 /* Landscape.png */,
 				F7F5931C168C6AFC00FA7ECD /* Landscape@2x.png */,
 				F75E36F5153709C4005E9D52 /* Palette.png */,
@@ -1119,9 +1083,7 @@
 				95D072B8173CD0C500FA492F /* House4.png in Resources */,
 				95D072B9173CD0C500FA492F /* House5.png in Resources */,
 				95D072BA173CD0C500FA492F /* House6.png in Resources */,
-				95B9DB3B17F067FF00F07112 /* KidsPaint_Icon_100.png in Resources */,
 				95D072BB173CD0C500FA492F /* House7.png in Resources */,
-				95B9DB3F17F067FF00F07112 /* KidsPaint_Icon_40.png in Resources */,
 				956CCC7017EC3698003DD9D7 /* StampRectangle.png in Resources */,
 				95D072BC173CD0C500FA492F /* House8.png in Resources */,
 				95D072BD173CD0C500FA492F /* House9.png in Resources */,
@@ -1151,13 +1113,11 @@
 				95D072E4173CD0DD00FA492F /* Troll.png in Resources */,
 				95D072F5173CD0F000FA492F /* Baby1.png in Resources */,
 				956CCCD417EC615B003DD9D7 /* StampTriangle@2x.png in Resources */,
-				95B9DB3417F0674500F07112 /* KidsPaint_Icon_152.png in Resources */,
 				956CCCF417EC7395003DD9D7 /* StampLightBulb.png in Resources */,
 				95D072F6173CD0F000FA492F /* Baby2.png in Resources */,
 				95D072F7173CD0F000FA492F /* Baby3.png in Resources */,
 				95D072F8173CD0F000FA492F /* Child1.png in Resources */,
 				95D072F9173CD0F000FA492F /* Child2.png in Resources */,
-				95B9DB3C17F067FF00F07112 /* KidsPaint_Icon_80.png in Resources */,
 				95D072FA173CD0F000FA492F /* Child3.png in Resources */,
 				95D072FB173CD0F000FA492F /* ChildrenWithBus.png in Resources */,
 				95D072FC173CD0F000FA492F /* Cowboy.png in Resources */,
@@ -1198,7 +1158,6 @@
 				95D0734C173D115900FA492F /* 32-iphone.png in Resources */,
 				95D0734D173D115900FA492F /* 32-iphone@2x.png in Resources */,
 				95D0734E173D115900FA492F /* house.png in Resources */,
-				95B9DB3D17F067FF00F07112 /* KidsPaint_Icon_58.png in Resources */,
 				95D0734F173D115900FA492F /* house@2x.png in Resources */,
 				95D07350173D115900FA492F /* people_family.png in Resources */,
 				95D07351173D115900FA492F /* people_family@2x.png in Resources */,
@@ -1247,9 +1206,9 @@
 				95B226C9173D45FF00A336FA /* Apple_thumb.png in Resources */,
 				95B226CA173D45FF00A336FA /* Dragon_thumb.png in Resources */,
 				95A1FE3417EB46B70010EE30 /* StampDiamond.png in Resources */,
+				42D4F1CF1EAA3D5F009BCE5C /* Images.xcassets in Resources */,
 				95B226CB173D45FF00A336FA /* iPhone_thumb.png in Resources */,
 				95B226CC173D45FF00A336FA /* Number1_thumb.png in Resources */,
-				95B9DB3217F0674500F07112 /* KidsPaint_Icon_76.png in Resources */,
 				95B226CD173D45FF00A336FA /* Number2_thumb.png in Resources */,
 				95B226CE173D45FF00A336FA /* Number3_thumb.png in Resources */,
 				95B226CF173D45FF00A336FA /* Number4_thumb.png in Resources */,
@@ -1267,7 +1226,6 @@
 				95B226D8173D45FF00A336FA /* Troll_thumb.png in Resources */,
 				95B226E9173D464700A336FA /* House1_thumb.png in Resources */,
 				95B226EA173D464700A336FA /* House2_thumb.png in Resources */,
-				95B9DB4017F067FF00F07112 /* KidsPaint_Icon_29.png in Resources */,
 				95B226EB173D464700A336FA /* House3_thumb.png in Resources */,
 				95B226EC173D464700A336FA /* House4_thumb.png in Resources */,
 				956CCCE017EC674B003DD9D7 /* StampSwirl@2x.png in Resources */,
@@ -1308,13 +1266,7 @@
 				95B22718173D468500A336FA /* Whale_thumb.png in Resources */,
 				958BC6C1173E3A0000378F23 /* TrashCircle.png in Resources */,
 				958BC6C2173E3A0000378F23 /* TrashCircle@2x.png in Resources */,
-				95C7336017C498200092BCBC /* KidsPaint_Icon_57.png in Resources */,
-				95C7336217C498290092BCBC /* KidsPaint_Icon_114.png in Resources */,
-				95B9DB3E17F067FF00F07112 /* KidsPaint_Icon_50.png in Resources */,
-				95B9DB3317F0674500F07112 /* KidsPaint_Icon_120.png in Resources */,
-				95C7336417C498310092BCBC /* KidsPaint_Icon_72.png in Resources */,
 				956CCCE117EC674B003DD9D7 /* StampSwirl.png in Resources */,
-				95C7336617C498350092BCBC /* KidsPaint_Icon_144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1496,6 +1448,7 @@
 		F7A889B014AF2894005FEC9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = VTHEP2B7UP;
@@ -1522,6 +1475,7 @@
 		F7A889B114AF2894005FEC9F /* Ad Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = VTHEP2B7UP;
@@ -1589,6 +1543,7 @@
 		F7F51B4914B3992300284702 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = VTHEP2B7UP;
