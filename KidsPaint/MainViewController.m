@@ -379,6 +379,10 @@
     
     activityViewController.excludedActivityTypes = excludedActivityTypes;
     
+    if (activityViewController.popoverPresentationController != nil) {
+        activityViewController.popoverPresentationController.barButtonItem = _shareButton;
+    }
+    
     [activityViewController setCompletionWithItemsHandler:^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError)
     {
         if (completed)
